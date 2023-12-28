@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Wish Generator</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+        #randomWish {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #refreshButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>LỜI CHÚC NGẪU NHIÊN ĐẾN TỪ SBA COMMUNICATIONS: </h1>
+    <p id="randomWish"></p>
+    
+
+    <script>
+        // Danh sách các câu chúc
+        var wishesList = [
+            "Chúc bạn có một ngày tuyệt vời!",
+            "Chiềng làng chiềng xã, thượng hạ đông tây, xa gần đó đây, vểnh tai nghe chúc: Tân niên sung túc, lắm phúc nhiều duyên, trong túi nhiều tiền, tâm hồn vui sướng.",
+            "Chúc bạn thành công trong mọi công việc!",
+            "Năm mới, chúc bạn sắc đẹp tuyệt vời, tiền vô phơi phới, người yêu không cần tìm cũng tự tới.",
+            "Chúc bạn luôn khỏe mạnh và hạnh phúc!",
+            "Chúc mừng năm mới 2024. Chúc gia đình hạnh phúc, tấn tài tấn lộc, tấn an khang.",
+            "Năm cũ qua đi, năm mới đã tới. Chúc bạn bầu trời sức khỏe, biển cả tình thương, đại dương tình bạn, sự nghiệp sáng ngời, gia đình thịnh vượng.",
+            "Chúc năm mới đau đầu vì nhà giàu. Mệt mỏi vì học giỏi. Buồn phiền vì nhiều tiền. Ngang trái vì xinh gái. Mệt mỏi vì đẹp trai. Và mất ngủ vì không có đối thủ.",
+            "Chúc bạn 12 tháng phú quý, 365 ngày phát tài, 8.760 giờ sung túc, 525.600 phút thành công và 31.536.000 giây mã đáo.",
+        ];
+
+        // Function để lấy câu chúc ngẫu nhiên
+        function getRandomWish() {
+            var randomIndex = Math.floor(Math.random() * wishesList.length);
+            return wishesList[randomIndex];
+        }
+
+        // Function để cập nhật câu chúc
+        function updateWish() {
+            var randomWish = getRandomWish();
+            document.getElementById("randomWish").textContent = randomWish;
+        }
+
+        // Cập nhật câu chúc khi trang được tải
+        window.onload = updateWish;
+
+        
+    </script>
+</body>
+</html>
